@@ -1,0 +1,41 @@
+//公共布局样式
+$me-header-height: (
+  one: 48px,
+  two: 96px,
+  three: 144px,
+  four: 192px,
+  five: 240px,
+);
+$base-header-margin: 12px;
+@each $key, $height in $me-header-height {
+  .me-layout {
+    height: 100%;
+    width: 100%;
+    .me-layout-header-#{$key} {
+      height: $height;
+      width: 100%;
+      .me-layout-form {
+        height: calc(100%) !important;
+        width: 100%;
+      }
+    }
+    .me-layout-content-#{$key} {
+      height: calc(100% - #{$height});
+      width: 100%;
+    }
+  }
+}
+:deep(.el-select) {
+  width: 100% !important;
+}
+:deep(.el-input-number) {
+  width: 100% !important;
+}
+:deep(.el-date-editor.el-input .el-input__wrapper) {
+  padding: 0 12px !important;
+  width: calc(100% - 24px) !important;
+}
+.me-loading {
+  z-index: 99999;
+  background: transparent;
+}

@@ -1,0 +1,6 @@
+export enum PermissionMutationType {
+  SET_ROUTE = 'SET_ROUTE',
+  SET_MENULIST = 'SET_MENULIST',
+  SET_FUNCTLIST = 'SET_FUNCTLIST',
+  SET_ROLELIST = 'SET_ROLELIST',
+}

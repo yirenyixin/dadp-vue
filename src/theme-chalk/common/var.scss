@@ -1,0 +1,90 @@
+@use "../color/index.scss" as *;
+@use "sass:map";
+//字体
+$font-family: () !default;
+$font-family: map.merge(
+    (
+        "mac": sans-serif,
+        "windows": Arial,
+    ),
+    $font-family
+);
+$spec-font-size: () !default;
+$spec-font-size: map.merge(
+    (
+        "large": 54px,
+        "medium": 46px,
+        "base": 38px,
+        "small":30px,
+    ),
+    $spec-font-size
+);
+
+$font-size: () !default;
+$font-size: map.merge(
+    (
+        "extra-large": 24px,
+        "large": 18px,
+        "medium": 16px,
+        "base": 14px,
+        "small": 13px,
+        "extra-small": 12px,
+    ),
+    $font-size
+);
+
+$text-color: () !default;
+$text-color: map.merge(
+    (
+        "primary": map.get($pro-gray-colors, "light", "light-1"),
+        "regular": map.get($pro-gray-colors, "light", "light-2"),
+        "secondary": map.get($pro-gray-colors, "light", "light-3"),
+        "placeholder": map.get($pro-gray-colors, "light", "light-4"),
+    ),
+    $text-color
+);
+
+$border-color: () !default;
+$border-color: map.merge(
+    (
+        "light": map.get($pro-gray-colors, "light", "light-5"),
+        "lighter": map.get($pro-gray-colors, "light", "light-6"),
+        "extra-light": map.get($pro-gray-colors, "light", "light-7"),
+    ),
+    $border-color
+);
+
+$border-color: () !default;
+$border-color: map.merge(
+    (
+        "light": map.get($pro-gray-colors, "light", "light-5"),
+        "lighter": map.get($pro-gray-colors, "light", "light-6"),
+        "extra-light": map.get($pro-gray-colors, "light", "light-7"),
+    ),
+    $border-color
+);
+
+$item-space: () !default;
+$item-space: map.merge(
+    (
+        "extra-large": 24px,
+        "large": 20px,
+        "medium": 18px,
+        "base": 12px,
+        "small": 6px,
+
+    ),
+    $item-space
+);
+$line-height: () !default;
+$line-height: map.merge(
+    (
+        "extra-large": 60px,
+        "large": 48px,
+        "medium": 36px,
+        "base": 24px,
+        "small": 12px,
+
+    ),
+    $line-height
+);

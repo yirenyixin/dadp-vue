@@ -1,0 +1,227 @@
+@use 'sass:map';
+//主色/品牌色
+$pro-primary-colors: () !default;
+//辅助色
+$pro-Secondary-colors: () !default;
+//更多辅助色库
+$pro-Secondary-colors-more: () !default;
+//中性色和灰度
+$pro-gray-colors: () !default;
+//功能色
+$pro-func-colors: () !default;
+
+$pro-primary-colors: map.deep-merge(
+  (
+    'base': #1d70f5,
+    'light-1': #04336b,
+    'light-2': #104484,
+    'light-3': #1452a8,
+    'light-4': #1963d1,
+    'light-5': #679df5,
+    'light-6': #91bfff,
+    'light-7': #b8d8ff,
+    'light-8': #e3f0ff,
+  ),
+  $pro-primary-colors
+);
+$pro-Secondary-colors: map.deep-merge(
+  (
+    'light-1': (
+      'base': #4b37e6,
+      'derived-1': #6c5beb,
+      'derived-2': #8e81f0,
+      'derived-3': #b5acfa,
+      'derived-4': #d6d2fa,
+    ),
+    'light-2': (
+      'base': #0db6cc,
+      'derived-1': #38c6d9,
+      'derived-2': #6ad7e6,
+      'derived-3': #a0e9f2,
+      'derived-4': #dbfbff,
+    ),
+    'light-3': (
+      'base': #f09f1d,
+      'derived-1': #57390a,
+      'derived-2': #7d530f,
+      'derived-3': #a36c14,
+      'derived-4': #c98518,
+      'derived-5': #f2b149,
+      'derived-6': #f5c476,
+      'derived-7': #f7d7a3,
+      'derived-8': #faebd2,
+    ),
+    'light-4': (
+      'base': #cc3c29,
+      'derived-1': #510000,
+      'derived-2': #6c0000,
+      'derived-3': #8b0000,
+      'derived-4': #ab1a11,
+      'derived-5': #ed5a41,
+      'derived-6': #ff775b,
+      'derived-7': #ff9475,
+      'derived-8': #ffb190,
+    ),
+  ),
+  $pro-Secondary-colors
+);
+$pro-Secondary-colors-more: map.deep-merge(
+  (
+    'wate-raceway': (
+      'light-1': #003772,
+      'light-2': #004d8b,
+      'light-3': #0065a6,
+      'light-4': #007ec2,
+      'light-5': #2a98de,
+      'light-6': #53b2fa,
+      'light-7': #74ceff,
+      'light-8': #94eaff,
+    ),
+    'turquoise-blue': (
+      'light-1': #003f3a,
+      'light-2': #005850,
+      'light-3': #007268,
+      'light-4': #008c81,
+      'light-5': #00a89b,
+      'light-6': #00c4b6,
+      'light-7': #00e0d2,
+      'light-8': #00f5e6,
+    ),
+    'thallium-flame': (
+      'light-1': #004000,
+      'light-2': #005900,
+      'light-3': #007316,
+      'light-4': #008e30,
+      'light-5': #00aa49,
+      'light-6': #00c662,
+      'light-7': #2be37c,
+      'light-8': #56ff96,
+    ),
+    'tirisfal-lime': (
+      'light-1': #003d00,
+      'light-2': #005700,
+      'light-3': #007000,
+      'light-4': #1e8a00,
+      'light-5': #44a500,
+      'light-6': #63c100,
+      'light-7': #81dd2c,
+      'light-8': #9efa4c,
+    ),
+    'cyber-yellow': (
+      'light-1': #472e00,
+      'light-2': #5b4500,
+      'light-3': #745c00,
+      'light-4': #907500,
+      'light-5': #ad8e00,
+      'light-6': #cca800,
+      'light-7': #ebc300,
+      'light-8': #ffdf1b,
+    ),
+    'soul-side': (
+      'light-1': #5b1d00,
+      'light-2': #763400,
+      'light-3': #924c00,
+      'light-4': #b06409,
+      'light-5': #ce7e29,
+      'light-6': #ed9843,
+      'light-7': #ffb35d,
+      'light-8': #ffce77,
+    ),
+    'march-hare-orange': (
+      'light-1': #740000,
+      'light-2': #901300,
+      'light-3': #ae3200,
+      'light-4': #ce4d00,
+      'light-5': #ee6800,
+      'light-6': #ff8323,
+      'light-7': #ff9e40,
+      'light-8': #ffba5b,
+    ),
+    'coquelicot': (
+      'light-1': #890000,
+      'light-2': #a80000,
+      'light-3': #c80000,
+      'light-4': #e92100,
+      'light-5': #ff4711,
+      'light-6': #ff662e,
+      'light-7': #ff8449,
+      'light-8': #ffa163,
+    ),
+    'love-red': (
+      'light-1': #820013,
+      'light-2': #a10026,
+      'light-3': #c1003c,
+      'light-4': #e02e52,
+      'light-5': #ff4f6a,
+      'light-6': #ff6d83,
+      'light-7': #ff8a9d,
+      'light-8': #ffa7b8,
+    ),
+    'ultra-pink': (
+      'light-1': #5d0076,
+      'light-2': #790990,
+      'light-3': #942eab,
+      'light-4': #b14bc6,
+      'light-5': #ce66e3,
+      'light-6': #eb81ff,
+      'light-7': #ff9dff,
+      'light-8': #ffb9ff,
+    ),
+    'purple-illusionist': (
+      'light-1': #211495,
+      'light-2': #452cb0,
+      'light-3': #6444cc,
+      'light-4': #815de9,
+      'light-5': #9e77ff,
+      'light-6': #bc91ff,
+      'light-7': #d9acff,
+      'light-8': #f8c8ff,
+    ),
+  ),
+  $pro-Secondary-colors-more
+);
+$pro-primary-colors: map.deep-merge(
+  (
+    'base': #1d70f5,
+    'light-1': #04336b,
+    'light-2': #104484,
+    'light-3': #1452a8,
+    'light-4': #1963d1,
+    'light-5': #679df5,
+    'light-6': #91bfff,
+    'light-7': #b8d8ff,
+    'light-8': #e3f0ff,
+  ),
+  $pro-primary-colors
+);
+$pro-gray-colors: map.deep-merge(
+  (
+    'light': (
+      'light-1': #222222,
+      'light-2': #555555,
+      'light-3': #999999,
+      'light-4': #cccccc,
+      'light-5': #e6e6e6,
+      'light-6': #efefef,
+      'light-7': #f6f6f6,
+    ),
+    'dark': (
+      'dark-1': #ffffff,
+      'dark-2': #dedede,
+      'dark-3': #bdbdbd,
+      'dark-4': #909090,
+      'dark-5': #646464,
+      'dark-6': #383838,
+    ),
+  ),
+  $pro-gray-colors
+);
+$pro-func-colors: map.deep-merge(
+  (
+    'success': #15ad2c,
+    'link': #1d70f5,
+    'warn': #fa8015,
+    'fail': #d70016,
+  ),
+  $pro-func-colors
+);

@@ -1,0 +1,87 @@
+@use 'sass:map';
+@use '../color/index.scss' as *;
+@use '../common/var.scss' as *;
+$layout-header-bg: map.get($pro-primary-colors, 'light-1');
+$layout-header-height: 48px;
+$layout-header-padding: map.get($item-space, 'small')
+  map.get($item-space, 'base');
+$layout-contain-aside-width: 202px;
+$layout-content-aside-hidwidth: 32px;
+$layout-main-bg: map.get($pro-gray-colors, 'light', 'light-7');
+$layout-main-header-height: 72px;
+$layout-header-item-height: 36px;
+$layout-item-icon: 16px;
+$layout-item-icon-width: 32px;
+$layout-item-light-height: 48px;
+$layout-breadcrumb-space: 20px;
+$layout-contain-padding: 20px;
+.app-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  &-nav {
+    width: 100%;
+    background: $layout-header-bg;
+    height: $layout-header-height;
+  }
+  &-main {
+    position: fixed;
+    top: $layout-header-height;
+    width: 100%;
+    height: calc(100% - #{$layout-header-height});
+    display: flex;
+    background: $layout-main-bg;
+    .app-main-menu {
+      width: $layout-contain-aside-width;
+      height: 100%;
+    }
+    .collapsed {
+      width: $layout-content-aside-hidwidth !important;
+    }
+    .app-main-content {
+      width: calc(100% - #{$layout-contain-aside-width});
+      height: 100%;
+    }
+    .collapsed-content {
+      width: calc(100% - #{$layout-content-aside-hidwidth}) !important;
+    }
+    .app-main-header {
+      width: 100%;
+      height: $layout-main-header-height;
+      .header-item-tags {
+        width: 100%;
+        height: $layout-header-item-height;
+      }
+      .header-item-bread {
+        width: calc(100% - #{$layout-breadcrumb-space}* 2);
+        height: $layout-header-item-height;
+        display: flex;
+        padding: 0 $layout-breadcrumb-space;
+        .el-icon {
+          height: $layout-header-item-height;
+          display: grid;
+          place-items: center;
+          svg {
+            width: $layout-item-icon;
+            height: $layout-item-icon;
+          }
+        }
+        .breadcrumb-box {
+          margin-left: $layout-item-icon;
+          display: grid;
+          place-items: center;
+          //   line-height: $layout-item-light-height;
+        }
+      }
+    }
+    .app-main-comp {
+      width: calc(100% - #{$layout-contain-padding}* 2);
+      height: calc(
+        100% - #{$layout-main-header-height} - #{$layout-contain-padding}
+      );
+      padding: 0 $layout-contain-padding;
+    }
+  }
+}

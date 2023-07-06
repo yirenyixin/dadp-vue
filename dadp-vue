@@ -1,0 +1,2 @@
+cd /d  D:\workspace\dadp-vue
+npm run serve:dev

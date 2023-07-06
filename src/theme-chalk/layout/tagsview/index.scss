@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use '../../color/index.scss' as *;
+$tags-items-height: 36px;
+$tag-bg-color: map.get($pro-gray-colors, 'light', 'light-6');
+$tags-space: 16px;
+$tags-icon: 14px;
+$tags-item-height-line: 24px;
+$tag-span-color: map.get($pro-gray-colors, 'light', 'light-1');
+$tag-span-active-color: map.get($pro-primary-colors, 'base');
+@mixin v-tags {
+  --el-tag-bg-color: #fff;
+  --el-tag-border-color: #fff;
+  --el-tag-font-size: 14px;
+}
+:deep(.el-tag) {
+  @include v-tags;
+}
+
+@mixin button-size {
+  line-height: $tags-item-height-line;
+  display: grid;
+  place-items: center;
+}
+.tags-view {
+  width: calc(100% - #{$tags-space}* 2);
+  height: 100%;
+  display: flex;
+  padding: 0 $tags-space;
+  background-color: $tag-bg-color;
+  &-button {
+    @include button-size;
+  }
+  &-route {
+    height: $tags-items-height;
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    .route-item {
+      height: $tags-items-height;
+      display: grid;
+      place-items: center;
+      padding: 0 8px;
+      .el-tag {
+        span {
+          color: $tag-span-color;
+        }
+      }
+    }
+    .route-item-active {
+      .el-tag {
+        span {
+          color: $tag-span-active-color !important;
+        }
+      }
+    }
+  }
+}
+.router-link-active,
+a {
+  text-decoration: none;
+}

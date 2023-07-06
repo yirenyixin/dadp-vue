@@ -1,0 +1,17 @@
+//居中
+.me-butons-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-group-left {
+  width: 100%;
+  text-align: left;
+}
+.el-button {
+  span {
+    .el-icon {
+      margin-right: 6px !important;
+    }
+  }
+}

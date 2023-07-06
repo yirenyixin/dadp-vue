@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use './color/index.scss' as *;
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': map.get($pro-primary-colors, 'base'),
+    ),
+    'success': (
+      'base': map.get($pro-func-colors, 'success'),
+    ),
+    'warning': (
+      'base': map.get($pro-func-colors, 'warn'),
+    ),
+    'danger': (
+      'base': map.get($pro-func-colors, 'fail'),
+    ),
+  )
+);
+.el-form-item {
+  margin-bottom: 16px !important;
+}
+@import './common/layout-define.scss';
+@import './table/index.scss';
+@import './card/index.scss';
+@import './button/index.scss';
+@import './dialog/index.scss';
+@import './layout/menu/index.scss';

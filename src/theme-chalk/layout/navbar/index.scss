@@ -1,0 +1,79 @@
+$navbar-left-width: 340px;
+$navbar-center-width: calc(100% - 660px);
+$navbar-right-width: 320px;
+$navbar-item-space: 6px 12px;
+$navbar-logo-height: 36px;
+$navbar-font-size: 14px;
+$navbar-line-height: 36px;
+$navbar-divider-space: 16px 0;
+$navbar-font-color: #fff;
+$navbar-right-icon: 18px;
+$navber-right-text-padding: 8px 16px;
+$navber-password-icon-padding: 2px 0 0 8px;
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &-left {
+    width: $navbar-left-width;
+    display: flex;
+    flex-wrap: nowrap;
+    &-logo {
+      padding: $navbar-item-space;
+      img {
+        height: $navbar-logo-height;
+        background-size: contain;
+      }
+    }
+    .el-divider--vertical {
+      margin: $navbar-divider-space;
+    }
+    &-title {
+      color: $navbar-font-color;
+      padding: $navbar-item-space;
+      font-size: $navbar-font-size;
+      line-height: $navbar-line-height;
+      font-weight: 800;
+    }
+  }
+  &-center {
+    width: $navbar-center-width;
+    display: grid;
+    place-items: center;
+  }
+  &-right {
+    width: $navbar-right-width;
+    .el-divider--vertical {
+      margin: $navbar-divider-space;
+    }
+    &-user {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      width: 100%;
+      color: $navbar-font-color;
+      font-size: $navbar-font-size;
+      line-height: $navbar-line-height;
+      .user-info {
+        padding: $navbar-item-space;
+      }
+      .user-roles {
+        padding: $navbar-item-space;
+        display: flex;
+        .el-dropdown {
+          line-height: $navbar-line-height;
+          font-size: $navbar-font-size;
+          color: $navbar-font-color;
+        }
+        .password-icon {
+          padding: $navber-password-icon-padding;
+        }
+      }
+    }
+    .logout-text {
+      padding: $navber-right-text-padding;
+    }
+  }
+}

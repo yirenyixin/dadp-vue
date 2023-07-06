@@ -1,0 +1,30 @@
+$table-footer-height: 48px;
+.me-table {
+  height: 100%;
+  width: 100%;
+  .me-table-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    &-main {
+      height: calc(100% - $table-footer-height);
+      width: 100%;
+      overflow: hidden;
+      .table-option-btn {
+        width: 100%;
+        height: $table-footer-height;
+      }
+    }
+    &-footer {
+      position: absolute;
+      height: $table-footer-height;
+      bottom: 0;
+      width: 100%;
+      .el-pagination {
+        padding-top: 16px;
+      }
+    }
+  }
+}
